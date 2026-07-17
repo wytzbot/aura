@@ -716,7 +716,7 @@
 
       const paystack = new PaystackPop();
       paystack.newTransaction({
-        key: PAYSTACK_PUBLIC_KEY,
+        key: pk_live_03887f82b23709cbf59e138ceeb9ca38eca18c1c,
         email: email,
         amount: 500000, 
         currency: "NGN",
@@ -737,7 +737,7 @@
 
     async function verifyPaymentOnBackend(reference) {
       try {
-        const res = await fetch(`${VERCEL_API_URL}?reference=${reference}`);
+        const res = await fetch(`${https://aura-6yeh.vercel.app/}?reference=${reference}`);
         const data = await res.json();
         return data.verified === true;
       } catch (err) {
